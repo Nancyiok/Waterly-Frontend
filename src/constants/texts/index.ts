@@ -1,0 +1,10 @@
+export { COMMON_TEXTS } from "./common";
+export { AUTH_TEXTS } from "./auth";
+export { PROFILE_TEXTS } from "./profile";
+export { NAVIGATION_TEXTS } from "./navigation";
+export { HOME_TEXTS } from "./home";
+export { NOT_FOUND_TEXTS } from "./notFound";
+export { TOAST_DEFAULT_TEXTS } from "./toast";
+export { HISTORY_TEXTS } from "./history";
+export { SETTINGS_TEXTS } from "./settings";
+export { STATISTICS_TEXTS } from "./statistics";

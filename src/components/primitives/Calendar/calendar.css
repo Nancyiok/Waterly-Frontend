@@ -1,0 +1,20 @@
+.rdp-root {
+  --rdp-accent-color: #4a9bd1;
+  --rdp-accent-background-color: #e8f4fb;
+  --rdp-today-color: #25537a;
+}
+
+.rdp-months,
+.rdp-month,
+.rdp-month_grid {
+  width: 100%;
+  max-width: none;
+}
+
+.rdp-day {
+  width: auto;
+}
+
+.rdp-day_button {
+  margin: 0 auto;
+}

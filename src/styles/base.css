@@ -1,0 +1,44 @@
+button:not(:disabled) {
+  cursor: pointer;
+}
+
+html {
+  font-size: 14px;
+}
+
+h1,
+h2{
+  font-weight: 600;
+}
+
+@layer base {
+  body {
+    @apply text-neutral-500;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply text-neutral-900;
+  }
+
+  h1 {
+    font-size: var(--text-3xl);
+    line-height: var(--text-3xl--line-height);
+  }
+
+  h2 {
+    font-size: var(--text-lg);
+    line-height: var(--text-lg--line-height);
+  }
+
+  h3 {
+    font-size: var(--text-base);
+    line-height: var(--text-base--line-height);
+  }
+}
+
+.script-title {
+  font-family: 'Dancing Script', cursive;
+  font-weight: 700;
+}

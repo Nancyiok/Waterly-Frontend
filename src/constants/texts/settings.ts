@@ -1,0 +1,78 @@
+export const SETTINGS_TEXTS = {
+  title: "Settings and preferences",
+  description: "Set up your daily water goal and reminders.",
+  goalOptions: {
+    climateTitle: "Climate and temperature",
+    loadTitle: "Physical activity and load",
+    loadDescription: "Hydration compensation for muscular strain, workouts, or physical labor",
+    factorsTitle: "Additional drinking factors",
+    factorsDescription: "Pick everything that applies to you",
+  },
+  goalSummary: {
+    title: "Your daily goal",
+    newTitle: "New daily goal",
+    unsaved: "Not saved yet",
+    savedGoal: "Current goal:",
+    unit: "ml each day",
+    partsTitle: "Parameters",
+    totalLabel: "Total",
+    saveButton: "Save settings",
+    resetButton: "Reset changes",
+    saveHint: "The goal is recalculated after you save your settings",
+  },
+  tabs: {
+    goal: "Daily goal",
+    reminders: "Reminders",
+  },
+  weather: {
+    cool: { label: "Cool", subtitle: "Under 18°C" },
+    moderate: { label: "Moderate", subtitle: "18 to 24°C" },
+    warm: { label: "Warm or hot", subtitle: "25 to 30°C" },
+    extreme: { label: "Extreme heat", subtitle: "Over 30°C" },
+  },
+  physicalLoad: {
+    sedentary: { label: "Sedentary", subtitle: "Desk work and resting" },
+    moderate: { label: "Moderate", subtitle: "Walking or light training" },
+    heavy: { label: "Heavy load", subtitle: "Intense daily workouts" },
+    athletic: { label: "Athletic", subtitle: "Full day endurance sports" },
+  },
+  factors: {
+    heavySweating: {
+      title: "Heavy sweating",
+      description: "Heat, cardio or fast metabolism",
+    },
+    caffeine: {
+      title: "Caffeine",
+      description: "Coffee, espresso or strong tea",
+    },
+    recovery: {
+      title: "Fever recovery",
+      description: "Recovery days or raised temperature",
+    },
+  },
+  goalParts: {
+    noExtra: "No extra",
+    extra: (ml: number) => `+${ml} ml`,
+    base: (weight: number) => (weight ? `Weight ${weight} kg` : "Base"),
+  },
+  reminders: {
+    title: "Reminders",
+    description: "Get a gentle nudge to drink water during the day",
+    enableLabel: "Remind me to drink water",
+    enableAriaLabel: "Enable reminders",
+    intervalLabel: "Remind every",
+    daysLabel: "Days",
+    fromLabel: "From",
+    toLabel: "To",
+    saveButton: "Save reminders",
+    nextReminder: (date: string) => `Next reminder: ${date}`,
+  },
+  toasts: {
+    goalUpdated: "Your daily goal is updated",
+    remindersSaved: "Reminders are saved",
+    pushDenied:
+      "Notifications are blocked in the browser, reminders will come by email. You can allow them in the site settings",
+    pushUnsupported:
+      "This browser doesn't support notifications, reminders will come by email",
+  },
+} as const;
