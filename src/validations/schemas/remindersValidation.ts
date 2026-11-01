@@ -1,16 +1,19 @@
 import * as z from "zod";
+import { SETTINGS_TEXTS } from "@/constants/texts";
+
+const { validation } = SETTINGS_TEXTS.reminders;
 
 export const remindersSchema = z
   .object({
     enabled: z.boolean(),
     intervalMinutes: z.string(),
-    startTime: z.string().min(1, "Enter start time"),
-    endTime: z.string().min(1, "Enter end time"),
-    days: z.array(z.number()).min(1, "Pick at least one day"),
+    startTime: z.string().min(1, validation.startTimeRequired),
+    endTime: z.string().min(1, validation.endTimeRequired),
+    days: z.array(z.number()).min(1, validation.daysRequired),
   })
 
   .refine((values) => values.endTime > values.startTime, {
-    message: "Must be later than start time",
+    message: validation.endTimeOrder,
     path: ["endTime"],
   });
 

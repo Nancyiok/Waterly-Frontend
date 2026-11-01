@@ -2,6 +2,7 @@ import { PhotoCard } from "@/components/primitives/PhotoCard";
 import { useFormContext, useWatch } from "react-hook-form";
 import { INITIAL_CUP_SIZES } from "../constants";
 import { HOME_TEXTS } from "@/constants/texts/home";
+import { COMMON_TEXTS } from "@/constants/texts";
 
 export const AddWaterPortionSize = () => {
   const { control, setValue } = useFormContext();
@@ -18,7 +19,7 @@ export const AddWaterPortionSize = () => {
             key={portion.id}
             image={portion.image}
             title={portion.label}
-            subtitle={`${portion.amount} ml`}
+            subtitle={`${portion.amount} ${COMMON_TEXTS.units.ml}`}
             isActive={amount === portion.amount}
             onClick={() =>
               setValue("amount", String(portion.amount), { shouldValidate: true })

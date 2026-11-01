@@ -9,6 +9,7 @@ import {
     type FieldErrorsImpl,
     type Merge,
 } from "react-hook-form";
+import {COMMON_TEXTS} from "@/constants/texts";
 
 type Props = {
     name: string;
@@ -127,7 +128,7 @@ export const Input = ({
                             iconSize,
                         )}
                         tabIndex={-1}
-                        aria-label={isPasswordVisible ? "Hide password" : "Show password"}
+                        aria-label={isPasswordVisible ? COMMON_TEXTS.hidePassword : COMMON_TEXTS.showPassword}
                     >
                         <Icon icon={isPasswordVisible ? "mdi:eye-off" : "mdi:eye"}/>
                     </button>

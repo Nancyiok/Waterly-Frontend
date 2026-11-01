@@ -1,4 +1,5 @@
 import {type ToastVariant, type ToastTheme} from "./types";
+import {TOAST_DEFAULT_TEXTS} from "@/constants/texts";
 
 export const TOAST_VARIANTS = {
     success: "success",
@@ -9,16 +10,16 @@ export const TOAST_VARIANTS = {
 
 export const DEFAULT_TEXT: Record<ToastVariant, { message: string }> = {
     [TOAST_VARIANTS.success]: {
-        message: "The action was completed successfully",
+        message: TOAST_DEFAULT_TEXTS.success,
     },
     [TOAST_VARIANTS.error]: {
-        message: "Something went wrong. Please try again",
+        message: TOAST_DEFAULT_TEXTS.error,
     },
     [TOAST_VARIANTS.warn]: {
-        message: "Please check the entered data",
+        message: TOAST_DEFAULT_TEXTS.warn,
     },
     [TOAST_VARIANTS.info]: {
-        message: "Time to drink some water",
+        message: TOAST_DEFAULT_TEXTS.info,
     },
 };
 

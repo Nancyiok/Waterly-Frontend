@@ -24,6 +24,16 @@ export const HOME_TEXTS = {
     emptyTitle: "No drinks recorded yet",
     emptyDescription: 'Click "Add water" to log your first intake',
   },
+  cupSizes: {
+    sip: "Sip",
+    smallGlass: "Small glass",
+    standardGlass: "Standard glass",
+    tallGlass: "Tall glass",
+    favoriteMug: "Favorite mug",
+    sportBottle: "Sport bottle",
+    largeBottle: "Large bottle",
+    literBottle: "Liter bottle",
+  },
   addWaterModal: {
     addTitle: "Add Drink",
     editTitle: "Edit Drink",

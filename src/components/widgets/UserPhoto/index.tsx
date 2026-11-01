@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Icon } from "@iconify/react";
+import { COMMON_TEXTS } from "@/constants/texts";
 
 type PhotoSize = "sm" | "lg";
 
@@ -28,7 +29,7 @@ export const UserPhoto = ({ avatarLink, size = "sm" }: Props) => {
       {avatarLink && !isBroken ? (
         <img
           src={avatarLink}
-          alt="user logo"
+          alt={COMMON_TEXTS.userPhotoAlt}
           className={`object-cover ${photoSizes[size]}`}
           referrerPolicy="no-referrer"
           onError={() => setIsBroken(true)}

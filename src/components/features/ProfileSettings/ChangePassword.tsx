@@ -1,6 +1,7 @@
 import {BasePanel} from "@/components/primitives/BasePanel";
 import {FormInputValidation} from "@/validations/FormInputValidation";
 import {PROFILE_FIELS_VALIDATION} from "@/validations/constants/profileValidationRules";
+import {PROFILE_TEXTS} from "@/constants/texts";
 
 interface PasswordFieldItem {
     name: string;
@@ -15,23 +16,23 @@ const PASSWORD_FIELDS: PasswordFieldItem[] = [
     {
         name: PROFILE_FIELS_VALIDATION.currentPassword,
         type: "password",
-        label: "Current Password",
-        placeholder: "Enter current password",
+        label: PROFILE_TEXTS.changePassword.currentPasswordLabel,
+        placeholder: PROFILE_TEXTS.changePassword.currentPasswordPlaceholder,
         leftIcon: "mdi:lock-outline",
         className: "sm:col-span-2",
     },
     {
         name: PROFILE_FIELS_VALIDATION.newPassword,
         type: "password",
-        label: "New Password",
-        placeholder: "At least 8 characters",
+        label: PROFILE_TEXTS.changePassword.newPasswordLabel,
+        placeholder: PROFILE_TEXTS.changePassword.newPasswordPlaceholder,
         leftIcon: "mdi:lock-plus-outline",
     },
     {
         name: PROFILE_FIELS_VALIDATION.repeatNewPassword,
         type: "password",
-        label: "Repeat Password",
-        placeholder: "Repeat new password",
+        label: PROFILE_TEXTS.changePassword.repeatPasswordLabel,
+        placeholder: PROFILE_TEXTS.changePassword.repeatPasswordPlaceholder,
         leftIcon: "mdi:lock-check-outline",
     },
 ];
@@ -39,9 +40,9 @@ const PASSWORD_FIELDS: PasswordFieldItem[] = [
 export const ChangePassword = () => {
     return (
         <BasePanel>
-            <h2 className="font-bold">Change Password</h2>
+            <h2 className="font-bold">{PROFILE_TEXTS.changePassword.title}</h2>
             <p className="mt-2">
-                Leave the fields blank if you don't want to change your password.
+                {PROFILE_TEXTS.changePassword.description}
             </p>
             <div className="mt-10 grid gap-x-5 gap-y-7 sm:grid-cols-2">
                 {PASSWORD_FIELDS.map(({ className, ...field }) => (

@@ -2,6 +2,18 @@ export const COMMON_TEXTS = {
   appName: "Waterly",
   or: "or",
   retryButton: "Try again",
+  closeButton: "Close",
+  showPassword: "Show password",
+  hidePassword: "Hide password",
+  userPhotoAlt: "User photo",
+  units: {
+    ml: "ml",
+  },
+  greetings: {
+    morning: "Good morning",
+    afternoon: "Good afternoon",
+    evening: "Good evening",
+  },
   errors: {
     defaultError: "An error occurred",
     unknownError: "Unknown error",

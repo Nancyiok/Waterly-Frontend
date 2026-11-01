@@ -1,4 +1,5 @@
 import DripIconLogo from "@/assets/icons/drip.svg?react";
+import {COMMON_TEXTS} from "@/constants/texts";
 
 type Props = {
     isLogoShown?: boolean;
@@ -20,7 +21,7 @@ export const LogoWidget = ({
             )}
             {isTitleShown && (
                 <p className={`script-title text-primary-dark ${appTitleSize}`}>
-                    Waterly
+                    {COMMON_TEXTS.appName}
                 </p>
             )}
         </div>

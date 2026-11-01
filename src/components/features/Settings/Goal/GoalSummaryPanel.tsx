@@ -3,6 +3,7 @@ import { Icon } from "@iconify/react";
 import { BasePanel } from "@/components/primitives/BasePanel";
 import { Button } from "@/components/primitives/Button";
 import { SectionHeading } from "@/components/primitives/SectionHeading";
+import { COMMON_TEXTS } from "@/constants/texts";
 import type { GoalPart } from "../constants";
 import { SETTINGS_TEXTS } from "@/constants/texts/settings";
 
@@ -58,9 +59,9 @@ export const GoalSummaryPanel = ({
       >
         {newTotal}
       </span>
-      ml
+      {COMMON_TEXTS.units.ml}
       {isWaterPartsChanged && (
-        <s className="ml-2 font-normal text-neutral-400">{total} ml</s>
+        <s className="ml-2 font-normal text-neutral-400">{total} {COMMON_TEXTS.units.ml}</s>
       )}
     </div>
 
@@ -75,7 +76,7 @@ export const GoalSummaryPanel = ({
           </div>
           <span className="font-bold">
             {index > 0 && "+"}
-            {amount} <span className="font-normal">ml</span>
+            {amount} <span className="font-normal">{COMMON_TEXTS.units.ml}</span>
           </span>
         </div>
       ))}

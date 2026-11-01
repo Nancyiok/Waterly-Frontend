@@ -1,12 +1,13 @@
 import {BasePanel} from "@/components/primitives/BasePanel";
 import {FormInputValidation} from "@/validations/FormInputValidation";
 import {PROFILE_FIELS_VALIDATION} from "@/validations/constants/profileValidationRules";
+import {PROFILE_TEXTS} from "@/constants/texts";
 
 const BODY_PARAMETERS_FIELDS = [
   {
     name: PROFILE_FIELS_VALIDATION.weight,
     type: "number",
-    label: "Weight, kg",
+    label: PROFILE_TEXTS.bodyParameters.weightLabel,
     leftIcon: "mdi:weight-kilogram",
     isOptional: true,
   },
@@ -15,9 +16,9 @@ const BODY_PARAMETERS_FIELDS = [
 export const BodyParameters = () => {
   return (
     <BasePanel>
-      <h2 className="font-bold">Body Parameters</h2>
+      <h2 className="font-bold">{PROFILE_TEXTS.bodyParameters.title}</h2>
       <p className="mt-2">
-        Helps calculate your personal daily intake more accurately.
+        {PROFILE_TEXTS.bodyParameters.description}
       </p>
       <div className="mt-10 grid grid-cols-2 gap-5">
         {BODY_PARAMETERS_FIELDS.map((field) => (

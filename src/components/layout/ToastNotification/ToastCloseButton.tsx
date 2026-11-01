@@ -1,5 +1,6 @@
 import {Icon} from "@iconify/react";
 import {type CloseButtonProps} from "react-toastify";
+import {TOAST_DEFAULT_TEXTS} from "@/constants/texts";
 
 const closeButtonPosition = "absolute top-1/2 right-3 z-10 -translate-y-1/2";
 const closeButtonShape = "grid size-6 place-items-center rounded-full";
@@ -11,7 +12,7 @@ export function ToastCloseButton({closeToast}: CloseButtonProps) {
     return (
         <button
             type="button"
-            aria-label="Close notification"
+            aria-label={TOAST_DEFAULT_TEXTS.closeButton}
             onClick={closeToast}
             className={`${closeButtonPosition} ${closeButtonShape} ${closeButtonColors} ${closeButtonInteraction}`}
         >

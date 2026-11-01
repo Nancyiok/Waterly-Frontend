@@ -6,6 +6,7 @@ import mugImage from "@/assets/images/cups/mug.jpg";
 import sportBottleImage from "@/assets/images/cups/sport-bottle.jpg";
 import largeBottleImage from "@/assets/images/cups/large-bottle.jpg";
 import literBottleImage from "@/assets/images/cups/liter-bottle.jpg";
+import { HOME_TEXTS } from "@/constants/texts";
 
 export interface CupSize {
   id: string;
@@ -23,12 +24,12 @@ export interface WaterLogItem {
 export const DAILY_GOAL = 2000;
 
 export const INITIAL_CUP_SIZES: CupSize[] = [
-  { id: "cup-1", label: "Sip", amount: 100, image: sipImage },
-  { id: "cup-2", label: "Small glass", amount: 150, image: smallGlassImage },
-  { id: "cup-3", label: "Standard glass", amount: 250, image: standardGlassImage },
-  { id: "cup-4", label: "Tall glass", amount: 300, image: tallGlassImage },
-  { id: "cup-5", label: "Favorite mug", amount: 350, image: mugImage },
-  { id: "cup-6", label: "Sport bottle", amount: 500, image: sportBottleImage },
-  { id: "cup-7", label: "Large bottle", amount: 750, image: largeBottleImage },
-  { id: "cup-8", label: "Liter bottle", amount: 1000, image: literBottleImage },
+  { id: "cup-1", label: HOME_TEXTS.cupSizes.sip, amount: 100, image: sipImage },
+  { id: "cup-2", label: HOME_TEXTS.cupSizes.smallGlass, amount: 150, image: smallGlassImage },
+  { id: "cup-3", label: HOME_TEXTS.cupSizes.standardGlass, amount: 250, image: standardGlassImage },
+  { id: "cup-4", label: HOME_TEXTS.cupSizes.tallGlass, amount: 300, image: tallGlassImage },
+  { id: "cup-5", label: HOME_TEXTS.cupSizes.favoriteMug, amount: 350, image: mugImage },
+  { id: "cup-6", label: HOME_TEXTS.cupSizes.sportBottle, amount: 500, image: sportBottleImage },
+  { id: "cup-7", label: HOME_TEXTS.cupSizes.largeBottle, amount: 750, image: largeBottleImage },
+  { id: "cup-8", label: HOME_TEXTS.cupSizes.literBottle, amount: 1000, image: literBottleImage },
 ];

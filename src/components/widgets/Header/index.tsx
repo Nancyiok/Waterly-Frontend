@@ -3,6 +3,7 @@ import {LogoWidget} from "@/components/widgets/LogoWidget";
 import {Button} from "@/components/primitives/Button";
 import {getCurrentWeekDay} from "@/utils/getCurrentWeekDay.ts";
 import {UserDropdown} from "@/components/widgets/UserDropdown";
+import {NAVIGATION_TEXTS} from "@/constants/texts";
 
 interface Props {
     setSidebarOpen?: React.Dispatch<React.SetStateAction<boolean>>;
@@ -17,7 +18,7 @@ export function Header({setSidebarOpen, sidebarOpen}: Props) {
                     variant={"outline"}
                     onClick={() => setSidebarOpen((prev) => !prev)}
                     shape={"square"}
-                    aria-label="Toggle sidebar"
+                    aria-label={NAVIGATION_TEXTS.sidebar.toggleSidebar}
                 >
                     <Icon icon="lucide:menu" width={22} height={22}/>
                 </Button>

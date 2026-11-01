@@ -33,7 +33,7 @@ export const PhotoCard = ({
     >
       <img
         src={image}
-        alt="photo card"
+        alt={title}
         className="aspect-4/3 w-full rounded-md object-cover object-top"
       />
 

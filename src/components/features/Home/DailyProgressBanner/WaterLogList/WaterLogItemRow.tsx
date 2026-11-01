@@ -3,6 +3,7 @@ import { type WaterLogItem } from "../../constants";
 import { WaterLogActions } from "./WaterLogActions";
 import { BasePanel } from "@/components/primitives/BasePanel";
 import { formatTime } from "@/utils/formatTime";
+import { COMMON_TEXTS } from "@/constants/texts";
 import { HOME_TEXTS } from "@/constants/texts/home";
 
 type Props = {
@@ -29,7 +30,7 @@ export const WaterLogItemRow = ({ item, onEdit, onDelete }: Props) => {
 
       <div className="flex items-center gap-3">
         <span className="font-bold text-base text-neutral-900">
-          +{item.ml} <span className="font-normal">ml</span>
+          +{item.ml} <span className="font-normal">{COMMON_TEXTS.units.ml}</span>
         </span>
         {onEdit && onDelete && (
           <WaterLogActions

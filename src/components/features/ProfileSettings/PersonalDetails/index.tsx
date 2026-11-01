@@ -3,6 +3,7 @@ import {FormInputValidation} from "@/validations/FormInputValidation";
 import {GenderSelector} from "@/components/features/ProfileSettings/PersonalDetails/GenderSelector";
 import {ProfileAvatar} from "@/components/features/ProfileSettings/ProfileAvatar";
 import {PROFILE_FIELS_VALIDATION} from "@/validations/constants/profileValidationRules";
+import {PROFILE_TEXTS} from "@/constants/texts";
 
 interface FormFieldItem {
     name: string;
@@ -18,33 +19,33 @@ const PERSONAL_DETAILS_FIELDS: FormFieldItem[] = [
     {
         name: PROFILE_FIELS_VALIDATION.firstName,
         type: "text",
-        label: "First Name",
-        placeholder: "John",
+        label: PROFILE_TEXTS.personalDetails.firstNameLabel,
+        placeholder: PROFILE_TEXTS.personalDetails.firstNamePlaceholder,
     },
     {
         name: PROFILE_FIELS_VALIDATION.lastName,
         type: "text",
-        label: "Last Name",
-        placeholder: "Smith",
+        label: PROFILE_TEXTS.personalDetails.lastNameLabel,
+        placeholder: PROFILE_TEXTS.personalDetails.lastNamePlaceholder,
     },
     {
         name: "email",
         type: "email",
-        label: "Email",
+        label: PROFILE_TEXTS.personalDetails.emailLabel,
         leftIcon: "mdi:email-outline",
         disabled: true,
     },
     {
         name: "phone",
         type: "tel",
-        label: "Phone",
+        label: PROFILE_TEXTS.personalDetails.phoneLabel,
         leftIcon: "mdi:phone-outline",
         isOptional: true,
     },
     {
         name: PROFILE_FIELS_VALIDATION.dateOfBirth,
         type: "date",
-        label: "Date of Birth",
+        label: PROFILE_TEXTS.personalDetails.dateOfBirthLabel,
         leftIcon: "mdi:calendar-outline",
         isOptional: true,
     },
@@ -53,9 +54,9 @@ const PERSONAL_DETAILS_FIELDS: FormFieldItem[] = [
 export const PersonalDetails = () => {
     return (
         <BasePanel>
-            <h2 className="font-bold">Personal Details</h2>
+            <h2 className="font-bold">{PROFILE_TEXTS.personalDetails.title}</h2>
             <p className="mt-2">
-                This information is only used in your profile.
+                {PROFILE_TEXTS.personalDetails.description}
             </p>
 
             <div className="mt-8 border-b border-neutral-100 pb-8">

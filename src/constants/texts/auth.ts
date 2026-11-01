@@ -4,6 +4,7 @@ export const AUTH_TEXTS = {
     emailLabel: "Email",
     emailPlaceholder: "Enter email",
     passwordLabel: "Password",
+    passwordPlaceholder: "Enter password",
     submitButton: "Login",
     submittingButton: "Logging in...",
     successMessage: "You have logged in successfully!",
@@ -11,6 +12,9 @@ export const AUTH_TEXTS = {
     noAccountText: "Don't have an account?",
     signUpLinkText: "Sign up",
     forgotPasswordLinkText: "Forgot password?",
+  },
+  google: {
+    errorMessage: "Google login failed",
   },
   signUp: {
     title: "Hey there! Ready to make hydration a habit?",

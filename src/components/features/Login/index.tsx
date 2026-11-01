@@ -23,15 +23,15 @@ const LOGIN_FORM_FIELDS: FormFieldItem[] = [
   {
     name: LOGIN_FIELS_VALIDATION.email,
     type: "email",
-    label: "Email",
-    placeholder: "Enter email",
+    label: AUTH_TEXTS.login.emailLabel,
+    placeholder: AUTH_TEXTS.login.emailPlaceholder,
     leftIcon: "mdi:email-outline",
   },
   {
     name: LOGIN_FIELS_VALIDATION.password,
     type: "password",
-    label: "Password",
-    placeholder: "Enter password",
+    label: AUTH_TEXTS.login.passwordLabel,
+    placeholder: AUTH_TEXTS.login.passwordPlaceholder,
     leftIcon: "mdi:lock-outline",
   },
 ];
@@ -45,7 +45,7 @@ export function LoginForm() {
   const { mutate, isPending } = useMutation({
     mutationFn: login,
     onSuccess: () =>
-      successToast({ message: "You have logged in successfully!" }),
+      successToast({ message: AUTH_TEXTS.login.successMessage }),
     onError: (err) => setError("root", { message: err.message }),
   });
 
@@ -71,7 +71,7 @@ export function LoginForm() {
         isLoading={isPending}
         className="mt-2"
       >
-        {isPending ? "Logging in..." : "Login"}
+        {isPending ? AUTH_TEXTS.login.submittingButton : AUTH_TEXTS.login.submitButton}
       </Button>
     </Form>
   );

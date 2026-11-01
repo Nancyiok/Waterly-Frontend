@@ -66,6 +66,28 @@ export const SETTINGS_TEXTS = {
     toLabel: "To",
     saveButton: "Save reminders",
     nextReminder: (date: string) => `Next reminder: ${date}`,
+    intervals: {
+      testMinute: "1 min for test",
+      halfHour: "30 min",
+      hour: "1 hour",
+      hourAndHalf: "1.5 hours",
+      twoHours: "2 hours",
+    },
+    weekdays: {
+      mon: "Mon",
+      tue: "Tue",
+      wed: "Wed",
+      thu: "Thu",
+      fri: "Fri",
+      sat: "Sat",
+      sun: "Sun",
+    },
+    validation: {
+      startTimeRequired: "Enter start time",
+      endTimeRequired: "Enter end time",
+      daysRequired: "Pick at least one day",
+      endTimeOrder: "Must be later than start time",
+    },
   },
   toasts: {
     goalUpdated: "Your daily goal is updated",

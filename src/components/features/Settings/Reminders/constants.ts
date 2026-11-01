@@ -1,4 +1,7 @@
 import type { RemindersFormValues } from "@/validations/schemas/remindersValidation";
+import { SETTINGS_TEXTS } from "@/constants/texts";
+
+const { intervals, weekdays } = SETTINGS_TEXTS.reminders;
 
 export const DEFAULT_REMINDER_SETTINGS: RemindersFormValues = {
   enabled: true,
@@ -9,13 +12,13 @@ export const DEFAULT_REMINDER_SETTINGS: RemindersFormValues = {
 };
 
 const INTERVAL_OPTIONS = [
-  { value: "30", label: "30 min" },
-  { value: "60", label: "1 hour" },
-  { value: "90", label: "1.5 hours" },
-  { value: "120", label: "2 hours" },
+  { value: "30", label: intervals.halfHour },
+  { value: "60", label: intervals.hour },
+  { value: "90", label: intervals.hourAndHalf },
+  { value: "120", label: intervals.twoHours },
 ] as const;
 
-const DEV_INTERVAL_OPTION = { value: "1", label: "1 min for test" } as const;
+const DEV_INTERVAL_OPTION = { value: "1", label: intervals.testMinute } as const;
 
 export const REMINDER_INTERVAL_OPTIONS = import.meta.env.DEV
   ? [DEV_INTERVAL_OPTION, ...INTERVAL_OPTIONS]
@@ -24,11 +27,11 @@ export const REMINDER_INTERVAL_OPTIONS = import.meta.env.DEV
 export type IntervalValue = (typeof REMINDER_INTERVAL_OPTIONS)[number]["value"];
 
 export const WEEKDAYS = [
-  { value: 1, label: "Mon" },
-  { value: 2, label: "Tue" },
-  { value: 3, label: "Wed" },
-  { value: 4, label: "Thu" },
-  { value: 5, label: "Fri" },
-  { value: 6, label: "Sat" },
-  { value: 0, label: "Sun" },
+  { value: 1, label: weekdays.mon },
+  { value: 2, label: weekdays.tue },
+  { value: 3, label: weekdays.wed },
+  { value: 4, label: weekdays.thu },
+  { value: 5, label: weekdays.fri },
+  { value: 6, label: weekdays.sat },
+  { value: 0, label: weekdays.sun },
 ];
