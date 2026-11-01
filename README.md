@@ -24,7 +24,7 @@
 
 Waterly is a water balance tracker. It counts how much water you drink during the day, sets a daily goal for you and reminds you to drink. This repo is the web app for it.
 
-Backend: [Water-balance-tracker-backend](https://github.com/Nancyiok/Water-balance-tracker-backend)
+Backend: [Waterly-Backend](https://github.com/Nancyiok/Waterly-Backend)
 
 ## What it can do
 
